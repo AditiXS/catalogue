@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Drama Catalogue</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: black;
+        }
+
+        h1 {
+            margin: 20px;
+            font-size: 2em;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .img {
+            width: 250px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Korean Television Series</h1>
+   
+    <div class="container">
+        <div class="card"><img class="img" src="download.jpeg" alt="Card 1"></div>
+        <div class="card"><img class="img" src="𝐀 𝐒𝐇𝐎𝐏 𝐅𝐎𝐑 𝐊𝐈𝐋𝐋𝐄𝐑𝐒.jpeg" alt="Card 2"></div>
+        <div class="card"><img class="img" src="Goblin.jpeg" alt="Card 3"></div>
+        <div class="card"><img class="img" src="Vigilante minimalist poster.jpeg" alt="Card 4"></div>
+        <div class="card"><img class="img" src="My Demon minimalist poster.jpeg" alt="Card 5"></div>
+        <div class="card"><img class="img" src="My Name Minimalist Poster.jpeg" alt="Card 6"></div>
+        <div class="card"><img class="img" src="download (2).jpeg" alt="Card 7"></div>
+        <div class="card"><img class="img" src="Doctor slump minimalist poster💗.jpeg" alt="Card 8"></div>
+        <div class="card"><img class="img" src="Strong woman do bong soon.jpeg" alt="Card 9"></div>
+        <div class="card"><img class="img" src="at a distance spring is green minimalist kdrama poster.jpeg" alt="Card 10"></div>
+        <div class="card"><img class="img" src="all of us are dead polaroid poster.jpeg" alt="Card 11"></div>
+        <div class="card"><img class="img" src="The heavenly idol.jpeg" alt="Card 12"></div>
+    </div>
+
+    <script>
+        const cardLinks = [
+            "https://en.wikipedia.org/wiki/Twenty-Five_Twenty-One",
+            "https://en.wikipedia.org/wiki/A_Shop_for_Killers",
+            "https://en.wikipedia.org/wiki/Guardian:_The_Lonely_and_Great_God",
+            "https://en.wikipedia.org/wiki/Vigilante_(TV_series)",
+            "https://en.wikipedia.org/wiki/My_Demon",
+            "https://en.wikipedia.org/wiki/My_Name_(TV_series)",
+            "https://en.wikipedia.org/wiki/Business_Proposal",
+            "https://en.wikipedia.org/wiki/Doctor_Slump_(TV_series)",
+            "https://en.wikipedia.org/wiki/Strong_Girl_Bong-soon",
+            "https://en.wikipedia.org/wiki/At_a_Distance,_Spring_Is_Green",
+            "https://en.wikipedia.org/wiki/All_of_Us_Are_Dead",
+            "https://en.wikipedia.org/wiki/The_Heavenly_Idol"
+        ];
+
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach((card, index) => {
+            card.addEventListener('click', () => {
+                window.open(cardLinks[index], "_blank");
+            });
+        });
+    </script>
+</body>
+</html>
